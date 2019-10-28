@@ -1,0 +1,12 @@
+# Builds the module for pigz.
+!include pigz.yaml
+!include /opt/rcic/include/rcic-module.yaml
+---
+- package: pigz Module
+  foundation: "foundation-"
+  pkgname: "{{ foundation }}{{ name }}-module"
+  module:
+    name: "{{ version }}"
+    path: "{{ pkg_defaults.module.path }}/{{ name }}"
+    prepend_path:
+      - PATH {{ root }}/bin

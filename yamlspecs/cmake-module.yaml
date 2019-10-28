@@ -1,0 +1,7 @@
+# Builds the module for cmake. 
+!include cmake.yaml
+!include /opt/rcic/include/rcic-module.yaml
+---
+- package: cmake Module
+  foundation: "foundation-"
+  pkgname: "{{ foundation }}{{ name }}-module"
