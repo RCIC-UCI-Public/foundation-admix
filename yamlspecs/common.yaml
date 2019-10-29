@@ -1,0 +1,20 @@
+# Common definitions for foundation packages
+---
+- category: foundation
+  extension: tar.gz
+  pkgname: foundation-{{ name }}
+  root: "{{ pkg_defaults.foundation }}"
+  build_module:
+    name: "{{version}}"
+    path: "{{pkg_defaults.module.path}}/{{name}}"
+    prepend_path:
+      - "{{pkg_defaults.module.prepend_path}}"
+  build:
+    configure: ./configure --prefix={{root}} 
+    configure_args: 
+    modules: 
+    target: 
+  install:
+    makeinstall: $(MAKE) DESTDIR=$(ROOT) install
+  files:
+    -  "{{ root }}/*/*"

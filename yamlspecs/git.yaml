@@ -27,14 +27,11 @@
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type d -exec chmod 755 {} \;
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type f -exec chmod 644 {} \;
 
-# spefiy separate dirs to avoid conflict with curl rpm
   files:
     -  "{{ root }}/bin/*"
-    -  "{{ root }}/libexec/git-core"
-    -  "{{ root }}/share/git*"
-    -  "{{ root }}/share/doc"
-    -  "{{ root }}/share/locale"
-    -  "{{ root }}/share/perl5"
-    -  "{{ root }}/share/man/man1/*"
-    -  "{{ root }}/share/man/man5/*"
-    -  "{{ root }}/share/man/man7/*"
+    -  "{{ root }}/libexec/{{name}}*"
+    -  "{{ root }}/share/{{name}}*"
+    -  "{{ root }}/share/doc/*"
+    -  "{{ root }}/share/locale/*"
+    -  "{{ root }}/share/perl5/*"
+    -  "{{ root }}/share/man/man*/*"

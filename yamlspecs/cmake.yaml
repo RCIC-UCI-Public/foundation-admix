@@ -15,3 +15,9 @@
     configure: ./bootstrap 
     modules: 
     target: 
+
+  files:
+    -  "{{ root }}/bin/*"
+    -  "{{ root }}/doc/*"
+    -  "{{ root }}/share/aclocal/*"
+    -  "{{ root }}/share/{{name}}*"
