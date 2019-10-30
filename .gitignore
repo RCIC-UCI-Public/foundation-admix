@@ -6,4 +6,5 @@ SPECS/
 cache/
 localrepo/
 yamlspecs/tmpbuild/
+yamlspecs/.rpmmacros
 yum.*
