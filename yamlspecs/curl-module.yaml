@@ -1,7 +1,0 @@
-# Build the module for curl.
-!include curl.yaml
-!include /opt/rcic/include/rcic-module.yaml
----
-- package: curl Module
-  foundation: "foundation-"
-  pkgname: "{{ foundation }}{{ name }}-module"
