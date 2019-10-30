@@ -1,0 +1,12 @@
+---
+bootstrap:
+system:
+build:
+   - foundation-module
+   - cmake
+   - curl
+   - git
+   - pigz
+   - swig
+manifest:
+   - "{{ build }}"
