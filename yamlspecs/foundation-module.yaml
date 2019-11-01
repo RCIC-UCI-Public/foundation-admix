@@ -1,21 +1,20 @@
-# Builds the module for git. 
+# Builds the common foundation module for 
+# all packages installed in /opt/foundation
 !include /opt/rcic/include/rcic-module.yaml
 ---
 - package: foundation Module
   category: TOOLS
   name: foundation
-  version: 1.0
+  versions: !include versions.yaml
+  version: "{{ versions.foundation }}"
   pkgname: "{{ name }}-module"
   root: "{{ pkg_defaults.foundation }}"
   description: |
-    This modules provides a setup for using up to date versions of 
-    commonly used tools installed in /opt/software.
+    This modules provides a setup for using up to date versions
+    of commonly used tools installed in /opt/software
   module:
     name: "{{ name }}"
     nonumber: true
     path: "{{ pkg_defaults.module.RCICmpath }}/{{ category }}"
-    prepend_path:
-      - "{{pkg_defaults.module.prepend_path}}"
   requires:
     - rcic-module-support
-

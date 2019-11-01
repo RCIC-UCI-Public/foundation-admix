@@ -2,7 +2,7 @@
 ---
 - package: pigz 
   name: pigz
-  version: "2.4"
+  version: "{{versions.pigz}}"
   vendor_source: https://zlib.net/pigz/{{ name }}-{{ version }}.{{ extension }}
   description: |
     Pigz, which stands for parallel implementation of gzip, is a fully functional 
@@ -11,8 +11,6 @@
     zlib and pthread libraries 
   build:
     configure: echo No configure needed
-    modules: 
-    target: 
   install:
     makeinstall: >
       mkdir -p $(ROOT)/{{ root }}/bin;

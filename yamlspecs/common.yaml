@@ -4,6 +4,7 @@
   extension: tar.gz
   pkgname: foundation-{{ name }}
   root: "{{ pkg_defaults.foundation }}"
+  versions: !include versions.yaml
   build_module:
     name: "{{version}}"
     path: "{{pkg_defaults.module.path}}/{{name}}"
