@@ -5,11 +5,6 @@
   pkgname: foundation-{{ name }}
   root: "{{ pkg_defaults.foundation }}"
   versions: !include versions.yaml
-  build_module:
-    name: "{{version}}"
-    path: "{{pkg_defaults.module.path}}/{{name}}"
-    prepend_path:
-      - "{{pkg_defaults.module.prepend_path}}"
   build:
     configure: ./configure --prefix={{root}} 
     configure_args: 
