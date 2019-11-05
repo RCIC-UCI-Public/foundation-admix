@@ -13,6 +13,7 @@
     This modules provides a setup for using up to date versions
     of commonly used tools installed in /opt/software
   module:
+    logname: "{{name}}"
     name: "{{ name }}"
     nonumber: true
     path: "{{ pkg_defaults.module.RCICmpath }}/{{ category }}"
