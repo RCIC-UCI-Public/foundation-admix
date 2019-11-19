@@ -11,11 +11,10 @@
   root: "{{ pkg_defaults.foundation }}"
   description: |
     This modules provides a setup for using up to date versions
-    of commonly used tools installed in {{ root }} 
+    of commonly used tools installed in {{ root }}
   module:
     logname: "{{name}}"
     name: "{{ name }}"
-    nonumber: true
     path: "{{ pkg_defaults.module.RCICmpath }}/{{ category }}"
     prepend_path:
       - "{{pkg_defaults.module.prepend_path}}"
