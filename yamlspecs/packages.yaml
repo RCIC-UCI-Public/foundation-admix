@@ -9,5 +9,6 @@ build:
    - pigz
    - scons
    - swig
+   - ninja 
 manifest:
    - "{{ build }}"
