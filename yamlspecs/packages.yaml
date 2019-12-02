@@ -11,4 +11,4 @@ build:
    - swig
    - ninja 
 manifest:
-   - "{{ build }}"
+   - "{{build}}"

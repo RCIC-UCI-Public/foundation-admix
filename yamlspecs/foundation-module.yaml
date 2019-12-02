@@ -1,4 +1,4 @@
-# Builds the common foundation module for 
+# Builds the foundation module for 
 # all packages installed in /opt/foundation
 !include /opt/rcic/include/rcic-module.yaml
 ---
@@ -6,18 +6,18 @@
   category: TOOLS
   name: foundation
   versions: !include versions.yaml
-  version: "{{ versions.foundation }}"
-  pkgname: "{{ name }}-module"
-  root: "{{ pkg_defaults.foundation }}"
+  version: "{{versions.foundation}}"
+  pkgname: "{{name}}-module"
+  root: "{{pkg_defaults.foundation}}"
   description: |
     This modules provides a setup for using up to date versions
-    of commonly used tools installed in {{ root }}
+    of commonly used tools installed in {{root}}
   module:
     logname: "{{name}}"
-    name: "{{ name }}"
-    path: "{{ pkg_defaults.module.RCICmpath }}/{{ category }}"
+    name: "{{name}}"
+    path: "{{pkg_defaults.module.RCICmpath}}/{{category}}"
     prepend_path:
       - "{{pkg_defaults.module.prepend_path}}"
-      - PYTHONPATH {{ root }}/lib/python2.7/site-packages
+      - PYTHONPATH {{root}}/lib/python2.7/site-packages
   requires:
     - rcic-module-support

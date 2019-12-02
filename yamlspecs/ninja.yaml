@@ -2,10 +2,10 @@
 ---
 - package: ninja 
   name:  ninja 
-  version: "{{ versions.ninja }}"
-  vendor_source: https://github.com/ninja-build/ninja/archive/v{{ version }}.{{ extension }}
+  version: "{{versions.ninja}}"
+  vendor_source: https://github.com/ninja-build/ninja/archive/v{{version}}.{{extension}}
   description: |
-    ninja version {{ version }}. 
+    ninja version {{version}}. 
     Ninja is a small build system with a focus on speed.
     https\://ninja-build.org/
 
@@ -20,7 +20,7 @@
     target: 
   install:
     makeinstall: >
-      mkdir -p $(ROOT){{ root }}/bin;
-      $(INSTALL) ninja $(ROOT){{ root }}/bin 
+      mkdir -p $(ROOT){{root}}/bin;
+      $(INSTALL) ninja $(ROOT){{root}}/bin 
   files:
-    - "{{ root }}/bin/*"
+    - "{{root}}/bin/*"

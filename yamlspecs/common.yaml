@@ -2,8 +2,8 @@
 ---
 - category: foundation
   extension: tar.gz
-  pkgname: foundation-{{ name }}
-  root: "{{ pkg_defaults.foundation }}"
+  pkgname: foundation-{{name}}
+  root: "{{pkg_defaults.foundation}}"
   versions: !include versions.yaml
   build:
     configure: ./configure --prefix={{root}} 
@@ -13,4 +13,4 @@
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
   files:
-    -  "{{ root }}/*/*"
+    -  "{{root}}/*/*"

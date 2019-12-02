@@ -3,7 +3,7 @@
 - package: pigz 
   name: pigz
   version: "{{versions.pigz}}"
-  vendor_source: https://zlib.net/pigz/{{ name }}-{{ version }}.{{ extension }}
+  vendor_source: https://zlib.net/pigz/{{name}}-{{version}}.{{extension}}
   description: |
     Pigz, which stands for parallel implementation of gzip, is a fully functional 
     replacement for gzip that exploits multiple processors and multiple cores to 
@@ -13,5 +13,5 @@
     configure: echo No configure needed
   install:
     makeinstall: >
-      mkdir -p $(ROOT)/{{ root }}/bin;
-      /bin/cp -p pigz $(ROOT)/{{ root }}/bin
+      mkdir -p $(ROOT)/{{root}}/bin;
+      /bin/cp -p pigz $(ROOT)/{{root}}/bin

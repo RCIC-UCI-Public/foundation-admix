@@ -2,7 +2,7 @@
 ---
 - package: swig 
   name: swig
-  version: "{{ versions.swig }}"
+  version: "{{versions.swig}}"
   vendor_source: http://prdownloads.sourceforge.net/swig/{{name}}-{{version}}.{{extension}}
   description: |
     SWIG is an interface compiler that connects programs written in C and C++ with scripting
