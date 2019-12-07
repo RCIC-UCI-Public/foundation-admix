@@ -1,6 +1,6 @@
 # Builds the foundation module for 
 # all packages installed in /opt/foundation
-!include /opt/rcic/include/rcic-module.yaml
+!include rcic-module.yaml
 ---
 - package: foundation Module
   category: TOOLS
