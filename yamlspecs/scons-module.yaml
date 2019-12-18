@@ -1,0 +1,17 @@
+# Builds the module for scons
+!include scons.yaml
+!include rcic-module.yaml
+---
+- package: scons Module
+  pkgname: "{{foundation}}{{name}}-{{version}}-module"
+  category: TOOLS
+  foundation: foundation-
+  module:
+    prepend_path:
+      - "{{pkg_defaults.module.prepend_path}}"
+      - PYTHONPATH {{root}}/lib/python2.7/site-packages
+    prereq:
+      - foundation
+  requires:
+    - "{{foundation}}{{name}}"
+    - rcic-module-support

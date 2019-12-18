@@ -18,6 +18,5 @@
     path: "{{pkg_defaults.module.RCICmpath}}/{{category}}"
     prepend_path:
       - "{{pkg_defaults.module.prepend_path}}"
-      - PYTHONPATH {{root}}/lib/python2.7/site-packages
   requires:
     - rcic-module-support
