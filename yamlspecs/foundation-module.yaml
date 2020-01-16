@@ -15,6 +15,7 @@
   module:
     logname: "{{name}}"
     name: "{{name}}"
+    loadname: "{{module.name}}"
     path: "{{pkg_defaults.module.RCICmpath}}/{{category}}"
     prepend_path:
       - "{{pkg_defaults.module.prepend_path}}"
