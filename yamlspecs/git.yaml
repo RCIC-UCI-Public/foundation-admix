@@ -26,11 +26,3 @@
       /usr/bin/tar -xf $(REDHAT.ROOT)/sources/{{distdoc}} -C $(ROOT)/{{root}}/share/doc --no-same-owner --no-overwrite-dir;
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type d -exec chmod 755 {} \;
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type f -exec chmod 644 {} \;
-  files:
-    -  "{{root}}/bin/*"
-    -  "{{root}}/libexec/{{name}}*"
-    -  "{{root}}/share/{{name}}*"
-    -  "{{root}}/share/doc/*"
-    -  "{{root}}/share/locale/*"
-    -  "{{root}}/share/perl5/*"
-    -  "{{root}}/share/man/man*/*"

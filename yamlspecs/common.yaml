@@ -1,8 +1,7 @@
 # Common definitions for foundation packages
+!include rcic-package.yaml
 ---
-- category: foundation
-  extension: tar.gz
-  pkgname: foundation-{{name}}
+- pkgname: foundation-{{name}}
   root: "{{pkg_defaults.foundation}}"
   versions: !include versions.yaml
   build:
@@ -13,4 +12,4 @@
   install:
     makeinstall: $(MAKE) DESTDIR=$(ROOT) install
   files:
-    -  "{{root}}/*/*"
+    -  "{{root}}"

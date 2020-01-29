@@ -13,5 +13,3 @@
     projects such as ITK and VTK.
   build:
     configure: ./bootstrap --prefix={{root}}
-    modules: 
-    target: 

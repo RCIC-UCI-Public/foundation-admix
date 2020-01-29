@@ -1,5 +1,5 @@
 # Builds the foundation module for 
-# all packages installed in /opt/foundation
+# most packages installed in /opt/foundation
 !include rcic-module.yaml
 ---
 - package: foundation Module
