@@ -15,8 +15,6 @@
   module:
     logname: "{{name}}"
     name: "{{name}}"
-    path: "{{pkg_defaults.module.RCICmpath}}/{{category}}"
-    prepend_path:
-      - "{{pkg_defaults.module.prepend_path}}"
+    path: "{{pkg_defaults.RCICmpath}}/{{category}}"
   requires:
     - rcic-module-support
