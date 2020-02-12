@@ -8,7 +8,7 @@
   foundation: foundation-
   module:
     prepend_path:
-      - "{{pkg_defaults.module.prepend_path}}"
+      - "{{mod_defaults.prepend_path}}"
       - PYTHONPATH {{root}}/lib/python2.7/site-packages
     prereq:
       - foundation
