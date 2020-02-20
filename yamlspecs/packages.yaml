@@ -1,6 +1,7 @@
 ---
 bootstrap:
 system:
+   - pcre-devel
 build:
    - foundation-module
    - cmake

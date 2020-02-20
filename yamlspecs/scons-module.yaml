@@ -8,9 +8,8 @@
   foundation: foundation-
   module:
     prepend_path:
+      - "{{mod_defaults.prepend_path}}"
       - PYTHONPATH {{root}}/lib/python2.7/site-packages
-      - PATH {{root}}/bin
-      - MANPATH {{root}}/share/man
   requires:
     - "{{foundation}}{{name}}"
     - rcic-module-support
