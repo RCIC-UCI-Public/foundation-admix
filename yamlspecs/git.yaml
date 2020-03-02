@@ -1,3 +1,4 @@
+
 !include common.yaml
 ---
 - package: git 
@@ -14,15 +15,16 @@
   install:
     makeinstall: >
       $(MAKE) DESTDIR=$(ROOT) install;
-      if [ ! -f $(REDHAT.ROOT)/sources/{{distman}} ]; then \
-        wget -O $(REDHAT.ROOT)/sources/{{distman}} {{vendorurl}}/{{distman}}; \
-      fi ; 
-      mkdir -p $(ROOT)/{{root}}/share/man; 
+      if [ ! -f $(REDHAT.ROOT)/sources/{{distman}} ]; then wget -O $(REDHAT.ROOT)/sources/{{distman}} {{vendorurl}}/{{distman}}; fi ;
+      mkdir -p $(ROOT)/{{root}}/share/man;
       /usr/bin/tar -xf $(REDHAT.ROOT)/sources/{{distman}} -C $(ROOT)/{{root}}/share/man --no-same-owner --no-overwrite-dir;
-      if [ ! -f $(REDHAT.ROOT)/sources/{{distdoc}} ]; then \
-        wget -O $(REDHAT.ROOT)/sources/{{distdoc}} {{vendorurl}}/{{distdoc}}; \
-      fi ; 
-      mkdir -p $(ROOT)/{{root}}/share/doc; 
+      if [ ! -f $(REDHAT.ROOT)/sources/{{distdoc}} ]; then wget -O $(REDHAT.ROOT)/sources/{{distdoc}} {{vendorurl}}/{{distdoc}}; fi ;
+      mkdir -p $(ROOT)/{{root}}/share/doc;
       /usr/bin/tar -xf $(REDHAT.ROOT)/sources/{{distdoc}} -C $(ROOT)/{{root}}/share/doc --no-same-owner --no-overwrite-dir;
-      /usr/bin/find $(ROOT)/{{root}}/share/doc -type d -exec chmod 755 {} \;
-      /usr/bin/find $(ROOT)/{{root}}/share/doc -type f -exec chmod 644 {} \;
+      echo "***** finding ****** ";
+      /usr/bin/find $(ROOT)/{{root}}/share/man -type d -exec chmod 755 {} \; -print;
+      /usr/bin/find $(ROOT)/{{root}}/share/man -type d -exec chmod g-s {} \; -print;
+      /usr/bin/find $(ROOT)/{{root}}/share/man -type f -exec chmod 644 {} \; -print;
+      /usr/bin/find $(ROOT)/{{root}}/share/doc -type d -exec chmod 755 {} \; -print;
+      /usr/bin/find $(ROOT)/{{root}}/share/doc -type f -exec chmod 644 {} \; -print 
+
