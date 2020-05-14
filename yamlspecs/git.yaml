@@ -1,4 +1,3 @@
-
 !include common.yaml
 ---
 - package: git 
@@ -27,4 +26,3 @@
       /usr/bin/find $(ROOT)/{{root}}/share/man -type f -exec chmod 644 {} \; -print;
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type d -exec chmod 755 {} \; -print;
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type f -exec chmod 644 {} \; -print 
-

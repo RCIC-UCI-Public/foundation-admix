@@ -1,7 +1,7 @@
 # Common definitions for foundation packages
 !include rcic-package.yaml
 ---
-- pkgname: foundation-{{name}}
+- baserpm: foundation-{{name}}
   root: "{{pkg_defaults.foundation}}"
   versions: !include versions.yaml
   build:
