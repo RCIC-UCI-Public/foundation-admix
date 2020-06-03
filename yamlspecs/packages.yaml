@@ -1,7 +1,11 @@
 ---
 bootstrap:
 system:
+   - gcc 
+   - gcc-c++ 
+   - gcc-fortran
    - pcre-devel
+   - zlib-devel
 build:
    - foundation-module
    - cmake
