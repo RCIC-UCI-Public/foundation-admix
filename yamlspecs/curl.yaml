@@ -2,7 +2,11 @@
 ---
 - package: curl 
   name: curl
+  release: "2"
   version: "{{versions.curl}}"
   vendor_source: https://curl.haxx.se/download/{{name}}-{{version}}.{{extension}}
   description: |
     Command line tool and library for transferring data with URLs
+
+  build:
+    configure_args:  --with-ssl --enable-http
