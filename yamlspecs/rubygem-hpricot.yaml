@@ -1,0 +1,32 @@
+# need to install ruby and rubygems before building
+# No need for module. Content go in /usr/local/[bin,share]
+!include rcic-package.yaml
+---
+#    curl -L -O https://rubygems.org/downloads/mustache-1.0.1.gem
+#    curl -L -O https://rubygems.org/downloads/ronn-0.7.3.gem
+- package: hpricot 
+  name: hpricot
+  baserpm: foundation-rubygem-{{name}}
+  versions: !include versions.yaml
+  version: "{{versions.hpricot}}"
+  extension: gem
+  no_src_dir: True
+  vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
+  description: |
+    Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
+  root: /usr/local
+  gemfile: "{{name}}-{{version}}.gem"
+  contents: lib 
+  build:
+      configure: no configure required
+      configure_args:
+      target:
+  install:
+      makeinstall: >
+         mkdir builddir;
+         gem install {{gemfile}} -i builddir;
+         mkdir -p  $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}};
+         mv builddir/specifications $(ROOT){{root}}/share/gems;
+         for x in {{contents}}; do mv builddir/gems/{{name}}-{{version}}/$$x $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}}; done
+  files:
+     - "{{root}}/share/gems/*"

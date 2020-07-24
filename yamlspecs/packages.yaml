@@ -1,5 +1,11 @@
 ---
 bootstrap:
+   - git
+   - foundation-module
+   - rubygem-rdiscount
+   - rubygem-hpricot
+   - rubygem-mustache
+   - rubygem-ronn
 system:
    - gcc 
    - gcc-c++ 
@@ -7,14 +13,14 @@ system:
    - pcre-devel
    - zlib-devel
 build:
-   - foundation-module
    - cmake
    - curl
-   - git
    - pigz
    - scons
    - scons-module
    - swig
    - ninja 
+   - git-lfs
 manifest:
+   - "{{bootstrap}}"
    - "{{build}}"

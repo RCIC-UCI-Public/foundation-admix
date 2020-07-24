@@ -1,0 +1,42 @@
+# need to install ruby and rubygems before building
+# No need for module. Content go in /usr/local/[bin,share]
+!include rcic-package.yaml
+---
+#    curl -L -O https://rubygems.org/downloads/rdiscount-2.1.8.gem
+#    curl -L -O https://rubygems.org/downloads/hpricot-0.8.6.gem
+#    curl -L -O https://rubygems.org/downloads/mustache-1.0.1.gem
+#    curl -L -O https://rubygems.org/downloads/ronn-0.7.3.gem
+- package: rdiscount 
+  name: rdiscount
+  baserpm: foundation-rubygem-{{name}}
+  versions: !include versions.yaml
+  version: "{{versions.rdiscount}}"
+  extension: gem
+  no_src_dir: True
+  vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
+  description: |
+    Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
+  root: /usr/local
+  gemfile: "{{name}}-{{version}}.gem"
+  contents: bin lib man
+  build:
+      configure: no configure required
+      configure_args:
+      target:
+  install:
+      makeinstall: >
+         mkdir builddir;
+         gem install {{gemfile}} -i builddir;
+         mkdir -p  $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}};
+         mv builddir/bin $(ROOT){{root}};
+         mv builddir/specifications $(ROOT){{root}}/share/gems;
+         for x in {{contents}}; do mv builddir/gems/{{name}}-{{version}}/$$x $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}}; done
+  files:
+     - "{{root}}/bin/*"
+     - "{{root}}/share/gems/*"
+
+#ls builddir/
+#bin  build_info  cache  doc  gems  specifications
+# ls builddir/gems/rdiscount-2.1.8/
+# bin  BUILDING  COPYING  ext  lib  man  Rakefile  rdiscount.gemspec  README.markdown  test
+#

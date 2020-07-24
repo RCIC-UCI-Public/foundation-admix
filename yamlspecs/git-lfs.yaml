@@ -1,0 +1,23 @@
+!include common.yaml
+---
+- package: git-lfs
+  name: git-lfs
+  version: "{{versions.git_lfs}}"
+  vendor_source: https://github.com/git-lfs/git-lfs/archive/v{{version}}.{{extension}}
+  description: |
+    Git-lfs {{version}} is a command line extension for managing
+    large files with git. See https://git-lfs.github.com
+  build:
+    configure: echo 'No configure required'
+    modules: 
+      - go
+      - foundation
+    pkgmake: make; make man
+  install:
+    makeinstall: >
+      mkdir -p $(ROOT){{root}}/bin;
+      mkdir -p $(ROOT)/{{root}}/share/man/man1;
+      $(INSTALL) bin/git-lfs $(ROOT){{root}}/bin;
+      $(INSTALL) man/*.1 $(ROOT){{root}}/share/man/man1 
+  files:
+    -  "{{root}}"
