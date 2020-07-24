@@ -4,6 +4,7 @@
 - baserpm: foundation-{{name}}
   root: "{{pkg_defaults.foundation}}"
   versions: !include versions.yaml
+  release: "2"
   build:
     configure: ./configure --prefix={{root}} 
     configure_args: 
