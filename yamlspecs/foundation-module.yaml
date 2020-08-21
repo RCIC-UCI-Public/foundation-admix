@@ -8,6 +8,7 @@
   name: foundation
   versions: !include versions.yaml
   version: "{{versions.foundation}}"
+  release: 2
   pkgname: "{{name}}-module"
   root: "{{pkg_defaults.foundation}}"
   description: |
