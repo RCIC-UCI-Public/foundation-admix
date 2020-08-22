@@ -9,7 +9,7 @@ bootstrap:
 system:
    - gcc 
    - gcc-c++ 
-   - gcc-fortran
+   - gcc-gfortran
    - pcre-devel
    - zlib-devel
    - ruby
