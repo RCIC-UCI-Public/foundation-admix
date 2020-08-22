@@ -23,8 +23,3 @@
       - "{{mod_defaults.prepend_path}}"
   requires:
     - rcic-module-support
-    - foundation-cmake
-    - foundation-curl
-    - foundation-git
-    - foundation-ninja
-    - foundation-swig
