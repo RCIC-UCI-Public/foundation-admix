@@ -12,6 +12,8 @@ system:
    - gcc-fortran
    - pcre-devel
    - zlib-devel
+   - ruby
+   - ruby-devel
 build:
    - cmake
    - curl
