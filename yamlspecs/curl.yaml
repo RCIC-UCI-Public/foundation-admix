@@ -9,4 +9,4 @@
     Command line tool and library for transferring data with URLs
 
   build:
-    configure_args:  --with-ssl --enable-http
+    configure_args:  --with-ssl --enable-http --with-libssh2

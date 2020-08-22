@@ -6,6 +6,8 @@ bootstrap:
    - rubygem-hpricot
    - rubygem-mustache
    - rubygem-ronn
+   - openssl-devel
+   - libssh2-devel
 system:
    - gcc 
    - gcc-c++ 
