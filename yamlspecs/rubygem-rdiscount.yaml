@@ -2,10 +2,6 @@
 # No need for module. Content go in /usr/local/[bin,share]
 !include rcic-package.yaml
 ---
-#    curl -L -O https://rubygems.org/downloads/rdiscount-2.1.8.gem
-#    curl -L -O https://rubygems.org/downloads/hpricot-0.8.6.gem
-#    curl -L -O https://rubygems.org/downloads/mustache-1.0.1.gem
-#    curl -L -O https://rubygems.org/downloads/ronn-0.7.3.gem
 - package: rdiscount 
   name: rdiscount
   baserpm: foundation-rubygem-{{name}}
