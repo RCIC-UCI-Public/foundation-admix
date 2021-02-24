@@ -8,12 +8,17 @@
   name: foundation
   versions: !include versions.yaml
   version: "{{versions.foundation}}"
-  release: 2
+  release: 3
   pkgname: "{{name}}-module"
   root: "{{pkg_defaults.foundation}}"
   description: |
     This modules provides a setup for using up to date versions
-    of commonly used tools installed in {{root}}
+    of commonly used tools for building software (tools located in {{root}}). 
+    Rather than individual modules, a single module provides access to the following 
+    updated tools: cmake({{versions.cmake.reg}}), curl({{versions.curl}}),
+    git({{versions.git}}), git-lfs({{versions.git_lfs}}), ninja({{versions.ninja}}), and
+    swig({{versions.swig}}).
+  
   module:
     logname: "{{name}}"
     name: "{{name}}"
