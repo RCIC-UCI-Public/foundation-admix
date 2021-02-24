@@ -2,8 +2,6 @@
 # No need for module. Content go in /usr/local/[bin,share]
 !include rcic-package.yaml
 ---
-#    curl -L -O https://rubygems.org/downloads/mustache-1.0.1.gem
-#    curl -L -O https://rubygems.org/downloads/ronn-0.7.3.gem
 - package: hpricot 
   name: hpricot
   baserpm: foundation-rubygem-{{name}}
