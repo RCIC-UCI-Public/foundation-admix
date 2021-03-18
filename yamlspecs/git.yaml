@@ -4,6 +4,7 @@
   name: git
   version: "{{versions.git}}"
   extension: tar.xz
+  release: "3"
   vendorurl: https://www.kernel.org/pub/software/scm/git
   vendor_source: "{{vendorurl}}/{{name}}-{{version}}.{{extension}}"
   distman: "{{name}}-manpages-{{version}}.{{extension}}"

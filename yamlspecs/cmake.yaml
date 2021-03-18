@@ -2,6 +2,7 @@
 ---
 - package: cmake 
   name: cmake
+  release: 3
   version: "{{versions.cmake.reg}}"
   vendor_source: https://cmake.org/files/{{versions.cmake.major}}/{{name}}-{{version}}.{{extension}}
   description: |
