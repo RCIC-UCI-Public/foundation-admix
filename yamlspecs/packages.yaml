@@ -1,11 +1,4 @@
 ---
-bootstrap:
-   - git
-   - foundation-module
-   - rubygem-rdiscount
-   - rubygem-hpricot
-   - rubygem-mustache
-   - rubygem-ronn
 system:
    - gcc 
    - gcc-c++ 
@@ -16,6 +9,14 @@ system:
    - ruby-devel
    - openssl-devel
    - libssh2-devel
+   - libcurl-devel
+bootstrap:
+   - git
+   - foundation-module
+   - rubygem-rdiscount
+   - rubygem-hpricot
+   - rubygem-mustache
+   - rubygem-ronn
 build:
    - cmake
    - curl
