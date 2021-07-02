@@ -1,8 +1,7 @@
-# Builds the module for scons
 !include scons.yaml
 !include rcic-module.yaml
 ---
-- package: scons Module
+- package: scons module
   category: TOOLS
   release: 2
   module:

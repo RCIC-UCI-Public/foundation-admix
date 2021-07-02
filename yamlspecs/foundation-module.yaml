@@ -3,7 +3,7 @@
 !include rcic-package.yaml
 !include rcic-module.yaml
 ---
-- package: foundation Module
+- package: foundation module
   category: TOOLS
   name: foundation
   versions: !include versions.yaml
@@ -12,13 +12,10 @@
   pkgname: "{{name}}-module"
   root: "{{pkg_defaults.foundation}}"
   description: |
-    This modules provides a setup for using up to date versions
-    of commonly used tools for building software (tools located in {{root}}). 
-    Rather than individual modules, a single module provides access to the following 
-    updated tools: cmake({{versions.cmake.reg}}), curl({{versions.curl}}),
-    git({{versions.git}}), git-lfs({{versions.git_lfs}}), ninja({{versions.ninja}}), and
-    swig({{versions.swig}}).
-  
+    This module provides access to up-to-date versions of commonly
+    used tools for building software including cmake v.{{versions.cmake.reg}},
+    curl v.{{versions.curl}}, git v.{{versions.git}}, git-lfs v.{{versions.git_lfs}}, ninja v.{{versions.ninja}},
+    and swig v.{{versions.swig}}.
   module:
     logname: "{{name}}"
     name: "{{name}}"
@@ -26,5 +23,5 @@
     path: "{{pkg_defaults.RCICmpath}}/{{category}}"
     prepend_path:
       - "{{mod_defaults.prepend_path}}"
-  requires:
-    - rcic-module-support
+    requires:
+      - rcic-module-support
