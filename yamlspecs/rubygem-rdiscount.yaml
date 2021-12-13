@@ -7,29 +7,39 @@
   baserpm: foundation-rubygem-{{name}}
   versions: !include versions.yaml
   version: "{{versions.rdiscount}}"
+  os_release: "{{versions.os_release}}"
+  
   extension: gem
   no_src_dir: True
   vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
   description: |
     Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
-  root: /usr/local
+  local: !ifeq "{{os_release}},8,,/local"
+  root: /usr{{local}}
+  libdir: "{{root}}/lib64/gems/ruby/{{name}}-{{version}}"
   gemfile: "{{name}}-{{version}}.gem"
+  extensions: !ifeq "{{os_release}},8,extensions,"
   contents: bin lib man
   build:
       configure: no configure required
       configure_args:
       target:
   install:
+      bindir: !ifeq "{{os_release}},8,--bindir builddir/bin,"
       makeinstall: >
          mkdir builddir;
-         gem install {{gemfile}} -i builddir;
+         gem install {{gemfile}} -i builddir {{install.bindir}};
          mkdir -p  $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}};
          mv builddir/bin $(ROOT){{root}};
          mv builddir/specifications $(ROOT){{root}}/share/gems;
-         for x in {{contents}}; do mv builddir/gems/{{name}}-{{version}}/$$x $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}}; done
+         for x in {{contents}}; do mv builddir/gems/{{name}}-{{version}}/$$x $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}}; done;
+         mkdir -p $(ROOT){{libdir}};
+         for x in $$(find builddir/{{extensions}} -type f); do install $$x $(ROOT){{libdir}}; done
+
   files:
      - "{{root}}/bin/*"
      - "{{root}}/share/gems/*"
+     - !ifneq "{{extensions}},,{{libdir}},"
 
 #ls builddir/
 #bin  build_info  cache  doc  gems  specifications

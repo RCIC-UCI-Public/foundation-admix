@@ -7,22 +7,27 @@
   baserpm: foundation-rubygem-{{name}}
   versions: !include versions.yaml
   version: "{{versions.ronn}}"
+  os_release: "{{versions.os_release}}"
   extension: gem
+  patchgem: !ifeq "{{os_release}},8,-1,"
+  gemfile: "{{name}}-{{version}}{{patchgem}}.{{extension}}"
+  src_tarball: "{{gemfile}}" 
   no_src_dir: True
   vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
   description: |
     Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
-  root: /usr/local
-  gemfile: "{{name}}-{{version}}.gem"
+  local: !ifeq "{{os_release}},8,,/local"
+  root: /usr{{local}}
   contents: bin lib man
   build:
       configure: no configure required
       configure_args:
       target:
   install:
+      bindir: !ifeq "{{os_release}},8,--bindir builddir/bin,"
       makeinstall: >
          mkdir builddir;
-         gem install {{gemfile}} -i builddir -l;
+         gem install {{gemfile}} -i builddir -l {{install.bindir}};
          mkdir -p  $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}};
          mv builddir/bin $(ROOT){{root}};
          mv builddir/specifications $(ROOT){{root}}/share/gems;
