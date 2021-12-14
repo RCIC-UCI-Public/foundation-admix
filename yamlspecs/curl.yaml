@@ -9,4 +9,5 @@
     Command line tool and library for transferring data with URLs
 
   build:
-    configure_args:  --with-ssl --enable-http --with-libssh2
+    config_ssh: !ifeq "{{versions.os_release}},8,--with-libssh,--with-libssh2"
+    configure_args:  --with-ssl --enable-http {{build.config_ssh}} 
