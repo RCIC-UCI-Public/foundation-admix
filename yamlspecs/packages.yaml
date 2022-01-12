@@ -22,6 +22,7 @@ bootstrap:
    - go-module
 build:
    - cmake
+   - cmake-module
    - curl
    - pigz
    - scons
