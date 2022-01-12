@@ -27,3 +27,5 @@
       /usr/bin/find $(ROOT)/{{root}}/share/man -type f -exec chmod 644 {} \; -print;
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type d -exec chmod 755 {} \; -print;
       /usr/bin/find $(ROOT)/{{root}}/share/doc -type f -exec chmod 644 {} \; -print 
+  rpm:
+     extras: "%define __brp_mangle_shebangs /bin/echo turn off shebang mangling"
