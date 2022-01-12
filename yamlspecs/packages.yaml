@@ -18,6 +18,8 @@ bootstrap:
    - rubygem-hpricot
    - rubygem-mustache
    - rubygem-ronn
+   - go
+   - go-module
 build:
    - cmake
    - curl
