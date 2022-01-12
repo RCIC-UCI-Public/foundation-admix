@@ -7,4 +7,4 @@
   module:
     prepend_path:
       - *Prepend_path
-      - PYTHONPATH {{root}}/lib/python2.7/site-packages
+      - PYTHONPATH {{root}}/lib/python{{versions.python_sys}}/site-packages
