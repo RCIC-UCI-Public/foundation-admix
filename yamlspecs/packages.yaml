@@ -33,3 +33,5 @@ build:
 manifest:
    - "{{bootstrap}}"
    - "{{build}}"
+sets:
+   - centos8
