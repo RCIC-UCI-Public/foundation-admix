@@ -4,7 +4,7 @@
 ---
 - package: mustache 
   name: mustache
-  baserpm: foundation-rubygem-{{name}}
+  baserpm: foundation-rubygem-{{name}}-{{versions.foundation}}
   versions: !include versions.yaml
   version: "{{versions.mustache}}"
   os_release: "{{versions.os_release}}"
@@ -33,3 +33,4 @@
   files:
      - "{{root}}/bin/*"
      - "{{root}}/share/gems/*"
+  conflicts: foundation-rubygem-{{name}}-{{versions.gemconflict}}

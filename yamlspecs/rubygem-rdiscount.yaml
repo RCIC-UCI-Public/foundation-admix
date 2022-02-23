@@ -4,7 +4,7 @@
 ---
 - package: rdiscount 
   name: rdiscount
-  baserpm: foundation-rubygem-{{name}}
+  baserpm: foundation-rubygem-{{name}}-{{versions.foundation}}
   versions: !include versions.yaml
   version: "{{versions.rdiscount}}"
   os_release: "{{versions.os_release}}"
@@ -40,6 +40,7 @@
      - "{{root}}/bin/*"
      - "{{root}}/share/gems/*"
      - !ifneq "{{extensions}},,{{libdir}},"
+  conflicts: foundation-rubygem-{{name}}-{{versions.gemconflict}}
 
 #ls builddir/
 #bin  build_info  cache  doc  gems  specifications

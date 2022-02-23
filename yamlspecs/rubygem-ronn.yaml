@@ -4,7 +4,7 @@
 ---
 - package: ronn 
   name: ronn
-  baserpm: foundation-rubygem-{{name}}
+  baserpm: foundation-rubygem-{{name}}-{{versions.foundation}}
   versions: !include versions.yaml
   version: "{{versions.ronn}}"
   os_release: "{{versions.os_release}}"
@@ -35,3 +35,4 @@
   files:
      - "{{root}}/bin/*"
      - "{{root}}/share/gems/*"
+  iconflicts: foundation-rubygem-{{name}}-{{versions.gemconflict}}
