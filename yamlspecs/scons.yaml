@@ -10,7 +10,7 @@
     SCons is implemented in Python, and its configuration files are actually Python scripts,
     allowing you to use the full power of a real scripting language to solve build problems. 
     You do not, however, need to know Python to use SCons effectively
-  src_dir: !ifeq "{{versions.os_release}},8,SCons-{{version}},{{name}}-{{version}}"
+  src_dir: !ifeq "{{versions.scons_series}},4,SCons-{{version}},{{name}}-{{version}}"
   build:
     configure: echo No configure required
     pkgmake: >
