@@ -16,8 +16,7 @@
   vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
   description: |
     Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
-  local: !ifeq "{{os_release}},8,,/local"
-  root: /usr{{local}}
+  root: "{{pkg_defaults.foundation}}/{{versions.foundation}}"
   contents: bin lib man
   build:
       configure: no configure required
@@ -35,4 +34,3 @@
   files:
      - "{{root}}/bin/*"
      - "{{root}}/share/gems/*"
-  iconflicts: foundation-rubygem-{{name}}-{{versions.gemconflict}}

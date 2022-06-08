@@ -14,8 +14,7 @@
   vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
   description: |
     Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
-  local: !ifeq "{{os_release}},8,,/local"
-  root: /usr{{local}}
+  root: "{{pkg_defaults.foundation}}/{{versions.foundation}}"
   libdir: "{{root}}/lib64/gems/ruby/{{name}}-{{version}}"
   gemfile: "{{name}}-{{version}}.gem"
   extensions: !ifeq "{{os_release}},8,extensions,"
@@ -40,10 +39,3 @@
      - "{{root}}/bin/*"
      - "{{root}}/share/gems/*"
      - !ifneq "{{extensions}},,{{libdir}},"
-  conflicts: foundation-rubygem-{{name}}-{{versions.gemconflict}}
-
-#ls builddir/
-#bin  build_info  cache  doc  gems  specifications
-# ls builddir/gems/rdiscount-2.1.8/
-# bin  BUILDING  COPYING  ext  lib  man  Rakefile  rdiscount.gemspec  README.markdown  test
-#
