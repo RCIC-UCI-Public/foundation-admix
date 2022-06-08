@@ -1,4 +1,5 @@
 ---
+site: !include site.yaml
 system:
    - gcc 
    - gcc-c++ 
@@ -8,7 +9,7 @@ system:
    - ruby
    - ruby-devel
    - openssl-devel
-   - libssh2-devel
+   - !ifeq "{{site.os_release}},8,libssh-devel,libssh2-devel"
    - libcurl-devel
 bootstrap:
    - git
@@ -19,6 +20,7 @@ bootstrap:
    - rubygem-ronn
 build:
    - cmake
+   - cmake-module
    - curl
    - pigz
    - scons
@@ -29,3 +31,5 @@ build:
 manifest:
    - "{{bootstrap}}"
    - "{{build}}"
+sets:
+   - centos8

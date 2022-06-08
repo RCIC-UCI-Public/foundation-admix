@@ -4,17 +4,20 @@
 ---
 - package: hpricot 
   name: hpricot
-  baserpm: foundation-rubygem-{{name}}
+  baserpm: foundation-rubygem-{{name}}-{{versions.foundation}}
   versions: !include versions.yaml
   version: "{{versions.hpricot}}"
+  os_release: "{{versions.os_release}}"
   extension: gem
   no_src_dir: True
   vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
   description: |
     Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
-  root: /usr/local
+  root: "{{pkg_defaults.foundation}}/{{versions.foundation}}"
+  libdir: "{{root}}/lib64/gems/ruby/{{name}}-{{version}}"
   gemfile: "{{name}}-{{version}}.gem"
   contents: lib 
+  extensions: extensions
   build:
       configure: no configure required
       configure_args:
@@ -25,6 +28,9 @@
          gem install {{gemfile}} -i builddir;
          mkdir -p  $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}};
          mv builddir/specifications $(ROOT){{root}}/share/gems;
-         for x in {{contents}}; do mv builddir/gems/{{name}}-{{version}}/$$x $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}}; done
+         for x in {{contents}}; do mv builddir/gems/{{name}}-{{version}}/$$x $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}}; done;
+         mkdir -p $(ROOT){{libdir}};
+         for x in $$(find builddir/{{extensions}} -type f); do install $$x $(ROOT){{libdir}}; done
   files:
      - "{{root}}/share/gems/*"
+     - !ifneq "{{extensions}},,{{libdir}},"

@@ -4,15 +4,16 @@
 ---
 - package: mustache 
   name: mustache
-  baserpm: foundation-rubygem-{{name}}
+  baserpm: foundation-rubygem-{{name}}-{{versions.foundation}}
   versions: !include versions.yaml
   version: "{{versions.mustache}}"
+  os_release: "{{versions.os_release}}"
   extension: gem
   no_src_dir: True
   vendor_source: https://rubygems.org/downloads/{{name}}-{{version}}.{{extension}}
   description: |
     Rubygem {{name}} {{version}}. Needed to build man pages for git-lsf
-  root: /usr/local
+  root: "{{pkg_defaults.foundation}}/{{versions.foundation}}"
   gemfile: "{{name}}-{{version}}.gem"
   contents: bin lib man
   build:
@@ -20,9 +21,10 @@
       configure_args:
       target:
   install:
+      bindir: !ifeq "{{os_release}},8,--bindir builddir/bin,"
       makeinstall: >
          mkdir builddir;
-         gem install {{gemfile}} -i builddir;
+         gem install {{gemfile}} -i builddir {{install.bindir}};
          mkdir -p  $(ROOT){{root}}/share/gems/gems/{{name}}-{{version}};
          mv builddir/bin $(ROOT){{root}};
          mv builddir/specifications $(ROOT){{root}}/share/gems;

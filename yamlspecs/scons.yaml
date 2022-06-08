@@ -1,4 +1,5 @@
 !include common.yaml
+!include rpm.yaml
 ---
 - package: scons 
   name: scons 
@@ -9,12 +10,17 @@
     SCons is implemented in Python, and its configuration files are actually Python scripts,
     allowing you to use the full power of a real scripting language to solve build problems. 
     You do not, however, need to know Python to use SCons effectively
+  src_dir: !ifeq "{{versions.scons_series}},4,SCons-{{version}},{{name}}-{{version}}"
   build:
     configure: echo No configure required
     pkgmake: >
       sed -i -e "s%('man', 'man1')%('share', 'man', 'man1')%" -e "s%man/man1%share/man/man1%"  setup.py;
       python ./setup.py
     target: build
+  opt: !ifeq "{{versions.os_release}},8,--install-data={{root}}/share/man/man1,--standard-lib"
   install:
     makeinstall: >
-      python ./setup.py install --standard-lib --prefix={{root}} --root=$(ROOT)
+      python ./setup.py install {{opt}} --prefix={{root}} --root=$(ROOT)
+
+# NOTE: sed command is superflous on CentOS 8. The setup.py in newer version is completely different
+# When CentOS 7 build is no longer needed update pkgmake, sec_dir and mamkeinstall accordingly

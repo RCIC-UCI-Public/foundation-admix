@@ -10,7 +10,7 @@
   build:
     configure: echo 'No configure required'
     modules: 
-      - go
+      - go/{{versions.go}}
       - foundation
     pkgmake: make; make man
   install:
