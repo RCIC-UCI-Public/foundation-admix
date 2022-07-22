@@ -11,7 +11,7 @@
     configure: echo 'No configure required'
     modules: 
       - go/{{versions.go}}
-      - foundation
+      - foundation/{{versions.foundation}}
     pkgmake: make; make man
   install:
     makeinstall: >
