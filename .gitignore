@@ -8,3 +8,4 @@ localrepo/
 yamlspecs/tmpbuild/
 yamlspecs/.rpmmacros
 yum.*
+*.pkg
