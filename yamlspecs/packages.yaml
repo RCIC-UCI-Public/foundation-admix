@@ -29,7 +29,5 @@ build:
    - ninja 
    - git-lfs
 manifest:
-   - "{{bootstrap}}"
-   - "{{build}}"
 sets:
    - centos8
