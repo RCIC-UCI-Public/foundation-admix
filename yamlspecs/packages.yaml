@@ -30,4 +30,4 @@ build:
    - git-lfs
 manifest:
 sets:
-   - centos8
+   - "2024"

@@ -1,3 +1,4 @@
+# see notes in ../README.md
 !include common.yaml
 ---
 - package: git-lfs
@@ -13,11 +14,14 @@
       - go/{{versions.go}}
       - foundation/{{versions.foundation}}
     pkgmake: make; make man
+  contents: man1 man5 man7
   install:
     makeinstall: >
       mkdir -p $(ROOT){{root}}/bin;
-      mkdir -p $(ROOT)/{{root}}/share/man/man1;
       $(INSTALL) bin/git-lfs $(ROOT){{root}}/bin;
-      $(INSTALL) man/*.1 $(ROOT){{root}}/share/man/man1 
+      for x in {{contents}}; do \
+        mkdir -p $(ROOT)/{{root}}/share/man/$$x; \
+        $(INSTALL) -m 644 man/$$x/* $(ROOT){{root}}/share/man/$$x; \
+      done
   files:
     -  "{{root}}"

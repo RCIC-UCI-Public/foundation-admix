@@ -1,0 +1,13 @@
+!include packages.yaml
+---
+versions: versions-2024.yaml
+bootstrap:
+   - git
+   - foundation-module
+   - asciidoctor
+manifest:
+   - git
+   - foundation-module
+   - "{{build}}"
+
+# asciidoctor is only needed for building man pages of git-lfs
