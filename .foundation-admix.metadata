@@ -26,3 +26,8 @@ b55d925ef2c28da4ef154a8b2e157951caf81125  sources/scons-3.1.1.tar.gz 1wZzcmNsuNv
 d376f35a56da4076b05a5c7c6830828296a03ff4  sources/scons-4.2.0.tar.gz 1-EugxTJoz5NUCigfudO6WhlN0flXtXqW
 3915d3ab537c171d6d086a8e93bfc545cebf6172  sources/swig-4.0.1.tar.gz 1okZSjKIvOAPnKIkiQTnazmgqmOmj-Uvn
 ced6676c625c49d78d73cbd3b9aaab8c30b9b4ee  sources/swig-4.0.2.tar.gz 1z9xSj4qTvSTAisI9nnxbS6gyWW7rOuon
+c1df9dcc002103aefec389200ffe20e9864ac7de  sources/asciidoctor-2.0.23.tar.gz
+f47002b6a90b136c8d3a4d66c0da2f4042b5ae2f  sources/git-lfs-3.5.1.tar.gz
+57f24bccdfc972c64623caa6d3e818f2513d041e  sources/git-2.45.1.tar.xz
+c16f5ce602ba32dae626cb6bff500ad95a431f22  sources/git-htmldocs-2.45.1.tar.xz
+953726e8cee50e21c50af680ad24eb63171fe116  sources/git-manpages-2.45.1.tar.xz
