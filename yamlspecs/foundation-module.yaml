@@ -8,7 +8,7 @@
   name: foundation
   versions: !include versions.yaml
   version: "{{versions.foundation}}"
-  release: 4
+  release: 5
   root: "{{pkg_defaults.foundation}}/{{versions.foundation}}"
   description: |
     This module provides access to up-to-date versions of commonly
