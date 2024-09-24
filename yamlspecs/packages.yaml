@@ -14,10 +14,7 @@ system:
 bootstrap:
    - git
    - foundation-module
-   - rubygem-rdiscount
-   - rubygem-hpricot
-   - rubygem-mustache
-   - rubygem-ronn
+   - asciidoctor
 build:
    - cmake
    - cmake-module

@@ -23,6 +23,7 @@ Updated versions of packages that are supplied by the base OS.
 1. git-lfs
 
    Version built prior to set-2024 needed specific ruby-gems
+   that were built in a bootstrap phase:
 
    - rubygem-rdiscount
    - rubygem-hpricot
