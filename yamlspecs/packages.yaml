@@ -12,9 +12,6 @@ system:
    - !ifeq "{{site.os_release}},8,libssh-devel,libssh2-devel"
    - libcurl-devel
 bootstrap:
-   - git
-   - foundation-module
-   - asciidoctor
 build:
    - cmake
    - cmake-module
