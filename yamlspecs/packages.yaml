@@ -16,12 +16,18 @@ build:
    - cmake
    - cmake-module
    - curl
+   - curl-module
    - pigz
+   - pigz-module
    - scons
    - scons-module
    - swig
+   - swig-module
    - ninja 
+   - ninja-module
    - git-lfs
+   - git-lfs-module
+   - foundation-module
 manifest:
 sets:
    - "2024"

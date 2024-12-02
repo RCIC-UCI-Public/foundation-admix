@@ -1,0 +1,11 @@
+!include git-lfs.yaml
+!include rcic-module.yaml
+---
+- package: git-lfs module
+  category: TOOLS
+  module:
+    prepend_path:
+      - PATH {{root}}/bin
+      - MANPATH {{root}}/share/man
+    setenv: 
+    prereq: 

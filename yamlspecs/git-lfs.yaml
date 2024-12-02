@@ -12,7 +12,8 @@
     configure: echo 'No configure required'
     modules: 
       - go/{{versions.go}}
-      - foundation/{{versions.foundation}}
+      - git/{{versions.git}}
+      - asciidoctor/{{versions.asciidoctor}}
     pkgmake: make; make man
   contents: man1 man5 man7
   install:
@@ -23,5 +24,7 @@
         mkdir -p $(ROOT)/{{root}}/share/man/$$x; \
         $(INSTALL) -m 644 man/$$x/* $(ROOT){{root}}/share/man/$$x; \
       done
+  requires:
+    - git_{{versions.git}}
   files:
     -  "{{root}}"

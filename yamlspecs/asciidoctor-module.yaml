@@ -1,0 +1,10 @@
+!include asciidoctor.yaml
+!include rcic-module.yaml
+---
+- package: asciidoctor module
+  category: TOOLS
+  module:
+    prepend_path:
+      - PATH {{root}}/bin
+      - GEM_PATH {{root}}/share/gems
+    setenv: 

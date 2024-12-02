@@ -5,10 +5,10 @@
   version: "{{versions.pigz}}"
   vendor_source: https://zlib.net/pigz/{{name}}-{{version}}.{{extension}}
   description: |
-    Pigz, which stands for parallel implementation of gzip, is a fully functional 
-    replacement for gzip that exploits multiple processors and multiple cores to 
-    the hilt when compressing data. pigz was written by Mark Adler, and uses the 
-    zlib and pthread libraries 
+    Pigz version {{version}} is a fully functional parallel implementaion and replacement
+    of gzip that exploits multiple processors and multiple cores to the hilt when
+    compressing data. Pigz was written by Mark Adler, and uses the zlib and pthread
+    libraries 
   build:
     configure: echo No configure needed
   install:

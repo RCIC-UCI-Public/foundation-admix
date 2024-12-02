@@ -1,0 +1,20 @@
+!include git.yaml
+!include rcic-module.yaml
+---
+- package: git module
+  category: TOOLS
+  module:
+    prepend_path:
+      - PATH {{root}}/bin
+      - MANPATH {{root}}/share/man
+    setenv: 
+      - GIT_HOME {{root}}
+
+#   logname: "{{name}}"
+#   name: "{{name}}"
+#   loadname: "{{module.name}}"
+#   path: "{{pkg_defaults.RCICmpath}}/{{category}}"
+#   prepend_path:
+#     - "{{mod_defaults.prepend_path}}"
+#   requires:
+#     - rcic-module-support

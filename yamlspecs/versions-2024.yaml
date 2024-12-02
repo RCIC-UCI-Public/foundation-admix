@@ -1,8 +1,6 @@
 !include site.yaml
 !include updates8.yaml
 ---
-#cmake: "3.22.1"
-#cmake_major: "v3.22"
 cmake: "3.30.2"
 cmake_major: "v3.30"
 curl: "7.81.0"
