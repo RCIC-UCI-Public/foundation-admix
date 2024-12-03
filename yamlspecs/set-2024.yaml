@@ -6,6 +6,8 @@ bootstrap:
    - git-module
    - asciidoctor
    - asciidoctor-module
+build:
+   - "{{build0}}"
 manifest:
    - git
    - git-module

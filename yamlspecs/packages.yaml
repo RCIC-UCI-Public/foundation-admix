@@ -12,7 +12,7 @@ system:
    - !ifeq "{{site.os_release}},8,libssh-devel,libssh2-devel"
    - libcurl-devel
 bootstrap:
-build:
+build0:
    - cmake
    - cmake-module
    - curl
@@ -28,8 +28,10 @@ build:
    - git-lfs
    - git-lfs-module
    - foundation-module
-manifest:
+build:
    - cmake
    - cmake-module
+manifest:
+   - "{{build}}"
 sets:
    - "2024"
