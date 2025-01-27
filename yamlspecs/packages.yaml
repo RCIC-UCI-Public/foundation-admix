@@ -13,24 +13,16 @@ system:
    - libcurl-devel
 bootstrap:
 build0:
-   - cmake
-   - cmake-module
-   - curl
-   - curl-module
    - pigz
    - pigz-module
    - scons
    - scons-module
    - swig
    - swig-module
-   - ninja 
-   - ninja-module
    - git-lfs
    - git-lfs-module
    - foundation-module
 build:
-   - cmake
-   - cmake-module
 manifest:
    - "{{build}}"
 sets:

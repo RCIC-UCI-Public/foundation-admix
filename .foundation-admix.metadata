@@ -1,8 +1,4 @@
 464da62812e449f90963e30dbf575c46fd8b3a3f  sources/asciidoctor-2.0.17.tar.gz 1KuSkKW77WCOI82VvKRZejIcGI9dqlRnx
-42b43d0a5d82285384db8d17b5bd5dd9cc3fc6a2  sources/cmake-3.20.5.tar.gz 1i9BUe6aDj62B3jA5ADGtyjHqSYYWsihq
-71861ee1c487edf05061ab5f7dc4f13a74bfbcdb  sources/cmake-3.22.1.tar.gz 1WmIylTiIxD2_GDXh7qTFSKDrrB7qKJRu
-bae80018d31ae3a8b56505907ab8a2c69270326e  sources/curl-7.66.0.tar.gz 1BhoRpq1Nob8bVX-gIxrYjRHX21SV0eA4
-ce298cbdcb5df754d2eb4a21c7d4ca813ab4f084  sources/curl-7.81.0.tar.gz 1ppxPLKwpXYaYivcQiS3zwD6eQ4SfAL0w
 fc627f8cb994c60ae6c4580ca514af2a18c464d7  sources/git-2.23.0.tar.xz 1BySkiSkIcRteKNl-paPC9NsQOulNI2OP
 190208c4978572852c236c20588a6553182e4b86  sources/git-2.34.1.tar.xz 1_K7I2rC2aa8uK95igpiuXbeYzN5ZVAcs
 410f0af98549c657282e0c4340751f261e3ed2dc  sources/git-htmldocs-2.23.0.tar.xz 1wE5Q9NePc8yk_zfV1_LA96bJNjom5O-5
@@ -11,17 +7,8 @@ fc627f8cb994c60ae6c4580ca514af2a18c464d7  sources/git-2.23.0.tar.xz 1BySkiSkIcRt
 674bed9cebafe829cf3eb6cab91a1a86b3c0f713  sources/git-lfs-3.0.2.tar.gz 1rG2a-InXX5OiBAHzw9PjlegV9imjnMia
 db4ccaa0e784669f0eb47ed1f23c665ad9638c29  sources/git-manpages-2.23.0.tar.xz 1Nf12LeOhKEjONbnMu5_VVHoeq2M-MRWl
 22b6444c2277ed213d5db6b0adecdbdfeed1ea45  sources/git-manpages-2.34.1.tar.xz 1yUKAmcV__X8A8Mb6VgGUgfuQ9yXdqdUM
-87ce2c17960a5e1d7ceaa16d0591ca6a28379ce0  sources/hpricot-0.8.6.gem 11aG9jSKe1mv-5PYwgQRjebemofGYf7M4
-ec0323af0f21b9022de1d973b9c7803941618bc5  sources/mustache-1.0.1.gem 1niM_8RhPcVhQtzDYpKU4RUM6BSBkzNEU
-52fafb63b70286bd197c5fa843c082798c1b8a85  sources/mustache-1.1.1.gem 1jvhotOhidWmsPsu6oJb3vUMmBI8mi8DD
-8d2e8c1c070c27fb9dc46b4a6345bbb1de7ccbaf  sources/ninja-1.10.2.tar.gz 1rCrtJkEBdAa3ExmHZZXmsq8ofgYoVQ8B
-d130e8cb7ed883125af978ec165199065e830d6a  sources/ninja-1.9.0.tar.gz 1LCVdj8iqELsbMbCNvrW99h7p-rs6tYdT
 92d4a8f3917865acca2c7c368cf0ed10d20d0612  sources/pigz-2.4.tar.gz 18onRg7SAFiTtkNmwNGterCczDirE1bCn
 da4683552b2e55ff133bb041bd3a76f218adc01e  sources/pigz-2.6.tar.gz 1kgHDuL3vc8IKxXZnEjHR47AoZBVBcXzK
-b9a058401a8562e79b314f42e40b7dff31c9966d  sources/rdiscount-2.1.8.gem 1kNuiKaKxXeset4_wbqwG0aOAB14zuBpH
-efbb7aee19ffff763a47a9c9b21d8ec901a3499e  sources/rdiscount-2.2.0.2.gem 1G0ThfOGs1TreHi_yc5POXQ9IX3nOv5CL
-fe83da6d53a0d7b58a42e451c217089841166853  sources/ronn-0.7.3-1.gem 1sT2AWbcK5H1yFUQ2pJw2XgdHp-cuOL-p
-e30936a7e93204a81dd84fc0bff283b645fa1c29  sources/ronn-0.7.3.gem 1lprQ_RiOHRZvrHzjB89-foIeZEOgMH9L
 b55d925ef2c28da4ef154a8b2e157951caf81125  sources/scons-3.1.1.tar.gz 1wZzcmNsuNv7icBLb8OagOo7GKJNOeqw1
 d376f35a56da4076b05a5c7c6830828296a03ff4  sources/scons-4.2.0.tar.gz 1-EugxTJoz5NUCigfudO6WhlN0flXtXqW
 3915d3ab537c171d6d086a8e93bfc545cebf6172  sources/swig-4.0.1.tar.gz 1okZSjKIvOAPnKIkiQTnazmgqmOmj-Uvn
@@ -31,4 +18,3 @@ f47002b6a90b136c8d3a4d66c0da2f4042b5ae2f  sources/git-lfs-3.5.1.tar.gz
 57f24bccdfc972c64623caa6d3e818f2513d041e  sources/git-2.45.1.tar.xz
 c16f5ce602ba32dae626cb6bff500ad95a431f22  sources/git-htmldocs-2.45.1.tar.xz
 953726e8cee50e21c50af680ad24eb63171fe116  sources/git-manpages-2.45.1.tar.xz
-7cf72aa27d1a7791e035060031aebfdcf0a10e5a  sources/cmake-3.30.2.tar.gz
