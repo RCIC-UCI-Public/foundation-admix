@@ -1,3 +1,4 @@
+!include versions.yaml
 !include site.yaml
 !include updates8.yaml
 ---
