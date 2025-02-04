@@ -1,17 +1,9 @@
-464da62812e449f90963e30dbf575c46fd8b3a3f  sources/asciidoctor-2.0.17.tar.gz 1KuSkKW77WCOI82VvKRZejIcGI9dqlRnx
-fc627f8cb994c60ae6c4580ca514af2a18c464d7  sources/git-2.23.0.tar.xz 1BySkiSkIcRteKNl-paPC9NsQOulNI2OP
 190208c4978572852c236c20588a6553182e4b86  sources/git-2.34.1.tar.xz 1_K7I2rC2aa8uK95igpiuXbeYzN5ZVAcs
-410f0af98549c657282e0c4340751f261e3ed2dc  sources/git-htmldocs-2.23.0.tar.xz 1wE5Q9NePc8yk_zfV1_LA96bJNjom5O-5
 89ed493e87a6ec28b1f000440dbc91fdbe979ea8  sources/git-htmldocs-2.34.1.tar.xz 1ps1_cZB6KhCF27QuXYNeVVAirBTgzV3I
-48fcb41914f2b6c59c3c7b6d7bd3ab9b19575f2b  sources/git-lfs-2.11.0.tar.gz 1MGtCDmHBsP-bveEaD0rmE0zTmEuAxtn2
 674bed9cebafe829cf3eb6cab91a1a86b3c0f713  sources/git-lfs-3.0.2.tar.gz 1rG2a-InXX5OiBAHzw9PjlegV9imjnMia
-db4ccaa0e784669f0eb47ed1f23c665ad9638c29  sources/git-manpages-2.23.0.tar.xz 1Nf12LeOhKEjONbnMu5_VVHoeq2M-MRWl
 22b6444c2277ed213d5db6b0adecdbdfeed1ea45  sources/git-manpages-2.34.1.tar.xz 1yUKAmcV__X8A8Mb6VgGUgfuQ9yXdqdUM
-92d4a8f3917865acca2c7c368cf0ed10d20d0612  sources/pigz-2.4.tar.gz 18onRg7SAFiTtkNmwNGterCczDirE1bCn
 da4683552b2e55ff133bb041bd3a76f218adc01e  sources/pigz-2.6.tar.gz 1kgHDuL3vc8IKxXZnEjHR47AoZBVBcXzK
-b55d925ef2c28da4ef154a8b2e157951caf81125  sources/scons-3.1.1.tar.gz 1wZzcmNsuNv7icBLb8OagOo7GKJNOeqw1
 d376f35a56da4076b05a5c7c6830828296a03ff4  sources/scons-4.2.0.tar.gz 1-EugxTJoz5NUCigfudO6WhlN0flXtXqW
-3915d3ab537c171d6d086a8e93bfc545cebf6172  sources/swig-4.0.1.tar.gz 1okZSjKIvOAPnKIkiQTnazmgqmOmj-Uvn
 ced6676c625c49d78d73cbd3b9aaab8c30b9b4ee  sources/swig-4.0.2.tar.gz 1z9xSj4qTvSTAisI9nnxbS6gyWW7rOuon
 c1df9dcc002103aefec389200ffe20e9864ac7de  sources/asciidoctor-2.0.23.tar.gz
 f47002b6a90b136c8d3a4d66c0da2f4042b5ae2f  sources/git-lfs-3.5.1.tar.gz
