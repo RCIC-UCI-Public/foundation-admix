@@ -8,8 +8,9 @@ system:
    - zlib-devel
    - ruby
    - ruby-devel
+   - rubygems
    - openssl-devel
-   - !ifeq "{{site.os_release}},8,libssh-devel,libssh2-devel"
+   - !ifneq "{{site.os_release}},7,libssh-devel,libssh2-devel"
    - libcurl-devel
 bootstrap:
 build0:
