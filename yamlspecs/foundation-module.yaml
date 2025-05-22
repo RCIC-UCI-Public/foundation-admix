@@ -10,11 +10,10 @@
   release: 6
 # root: "{{pkg_defaults.foundation}}/{{versions.foundation}}"
   description: |
-    This module is provided for a backward compatibility to give an access
-    to all software that was previously installed in /opt/foundation and
-    include cmake, curl, git, git-lfs, ninja, pigz, scons, swig.
-    Currently, each software has its own module and should be used 
-    via loding its own module.
+    Provides an access to software in /opt/foundation.
+    This module is provided only for a backward compatibility.
+    The software includes cmake, curl, git, git-lfs, ninja, pigz, scons, swig.
+    Each software has its own module which should be used in place of this module.
   module:
     prepend_path:
     setenv:

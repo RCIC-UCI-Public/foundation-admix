@@ -7,5 +7,5 @@
     prepend_path:
       - PATH {{root}}/bin
       - MANPATH {{root}}/share/man
-    setenv: 
-    prereq: 
+    setenv:
+    prereq:

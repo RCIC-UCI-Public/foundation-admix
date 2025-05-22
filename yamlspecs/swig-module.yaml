@@ -6,5 +6,5 @@
   module:
     prepend_path:
       - PATH {{root}}/bin
-    setenv: 
+    setenv:
       - SWIG_HOME {{root}}

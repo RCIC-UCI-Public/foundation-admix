@@ -6,11 +6,11 @@
   version: "{{versions.git_lfs}}"
   vendor_source: https://github.com/git-lfs/git-lfs/archive/v{{version}}.{{extension}}
   description: |
-    Git-lfs {{version}} is a command line extension for managing
+    Git-lfs is a command line extension for managing
     large files with git. See https://git-lfs.github.com
   build:
     configure: echo 'No configure required'
-    modules: 
+    modules:
       - go/{{versions.go}}
       - git/{{versions.git}}
       - asciidoctor/{{versions.asciidoctor}}

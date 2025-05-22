@@ -1,14 +1,14 @@
 !include common.yaml
 ---
-- package: pigz 
+- package: pigz
   name: pigz
   version: "{{versions.pigz}}"
   vendor_source: https://zlib.net/pigz/{{name}}-{{version}}.{{extension}}
   description: |
-    Pigz version {{version}} is a fully functional parallel implementaion and replacement
-    of gzip that exploits multiple processors and multiple cores to the hilt when
-    compressing data. Pigz was written by Mark Adler, and uses the zlib and pthread
-    libraries 
+    Pigz is a parallel implementaion and replacement of gzip.
+    It exploits multiple processors and multiple cores to the
+    hilt when compressing data. Pigz was written by Mark Adler
+    and uses the zlib and pthread libraries.
   build:
     configure: echo No configure needed
   install:

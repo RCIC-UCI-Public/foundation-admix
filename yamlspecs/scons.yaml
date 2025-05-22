@@ -1,15 +1,14 @@
 !include common.yaml
 !include rpm.yaml
 ---
-- package: scons 
-  name: scons 
+- package: scons
+  name: scons
   version: "{{versions.scons}}"
   vendor_source: http://prdownloads.sourceforge.net/scons/{{name}}-{{version}}.{{extension}}
   description: |
-    SCcons version {{version}}. This is SCons, a tool for building software (and other files).
-    SCons is implemented in Python, and its configuration files are actually Python scripts,
-    allowing you to use the full power of a real scripting language to solve build problems. 
-    You do not, however, need to know Python to use SCons effectively
+    SCons is a tool for building software (and other files).
+    SCons is implemented in Python, and its configuration files
+    are actually Python scripts.
   src_dir: SCons-{{version}}
   build:
     configure: echo No configure required

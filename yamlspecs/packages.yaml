@@ -1,8 +1,8 @@
 ---
 site: !include site.yaml
 system:
-   - gcc 
-   - gcc-c++ 
+   - gcc
+   - gcc-c++
    - gcc-gfortran
    - pcre-devel
    - zlib-devel
