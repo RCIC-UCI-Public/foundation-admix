@@ -1,0 +1,13 @@
+784000          asciidoctor_2.0.23-2.0.23-1.noarch.rpm
+7700            asciidoctor_2.0.23-module-2.0.23-1.noarch.rpm
+7900            foundation_v8-module-v8-6.x86_64.rpm
+3937700         git-lfs_3.5.1-3.5.1-1.x86_64.rpm
+7600            git-lfs_3.5.1-module-3.5.1-1.x86_64.rpm
+9501900         git_2.45.1-2.45.1-1.x86_64.rpm
+7400            git_2.45.1-module-2.45.1-1.x86_64.rpm
+76900           pigz_2.6-2.6-1.x86_64.rpm
+7700            pigz_2.6-module-2.6-1.x86_64.rpm
+2127800         scons_4.2.0-4.2.0-1.x86_64.rpm
+7700            scons_4.2.0-module-4.2.0-1.x86_64.rpm
+1148700         swig_4.0.2-4.0.2-1.x86_64.rpm
+7600            swig_4.0.2-module-4.0.2-1.x86_64.rpm
