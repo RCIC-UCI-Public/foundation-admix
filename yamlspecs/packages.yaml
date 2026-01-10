@@ -12,6 +12,7 @@ system:
    - openssl-devel
    - !ifneq "{{site.os_release}},7,libssh-devel,libssh2-devel"
    - libcurl-devel
+   - gettext
 bootstrap:
 build0:
    - pigz
