@@ -1,4 +1,4 @@
-# For bckward compatibility with previous foundaiton module
+# Used for a backward compatibility with previous foundation module
 !include rcic-package.yaml
 !include rcic-module.yaml
 ---
@@ -8,7 +8,6 @@
   versions: !include versions.yaml
   version: "{{versions.foundation}}"
   release: 6
-# root: "{{pkg_defaults.foundation}}/{{versions.foundation}}"
   description: |
     Provides an access to software in /opt/foundation.
     This module is provided only for a backward compatibility.
