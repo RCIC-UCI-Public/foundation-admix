@@ -1,5 +1,0 @@
-!include curl.yaml
-!include rcic-module.yaml
----
-- package: curl module
-  category: TOOLS
