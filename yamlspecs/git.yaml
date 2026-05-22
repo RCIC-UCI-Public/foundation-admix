@@ -1,6 +1,5 @@
 # see notes in ../README.md
 !include common.yaml
-!include rpm.yaml
 ---
 - package: git
   name: git

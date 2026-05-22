@@ -1,5 +1,6 @@
-# see notes in .,./README.md
+# see notes in ../README.md
 !include rcic-package.yaml
+!include rpm.yaml
 ---
 - package: asciidoctor
   name: asciidoctor
