@@ -1,4 +1,5 @@
 !include versions.yaml
 !include site.yaml
 ---
+scons: "4.8.1"
 swig: "4.4.1"

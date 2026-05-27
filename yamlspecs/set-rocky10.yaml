@@ -1,9 +1,0 @@
-!include packages.yaml
----
-versions: versions-rocky10.yaml
-bootstrap:
-build:
-   - swig
-   - swig-module
-manifest:
-   - "{{build}}"

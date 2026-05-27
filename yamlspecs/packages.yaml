@@ -14,12 +14,18 @@ system:
    - libcurl-devel
    - gettext
 bootstrap:
+
+# This are software components that are built at one version
+# for Rocky9 and a different version for Rocky10
+# See set-2024 and set-2026 for the logic to determine when to include this set of packages 
+build_release_specific:
+   - swig
+   - swig-module
+   - scons
+   - scons-module
 build0:
    - pigz
    - pigz-module
-   - scons
-   - scons-module
-   - !eval "'swig swig-module' if int({{site.os_release}}) < 10 else ''"
    - git-lfs
    - git-lfs-module
    - foundation-module
@@ -28,4 +34,4 @@ manifest:
    - "{{build}}"
 sets:
    - "2024"
-   - !eval "'rocky10' if int({{site.os_release}}) >= 10 else ''"
+   - "2026"

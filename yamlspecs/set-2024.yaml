@@ -8,6 +8,7 @@ bootstrap:
    - asciidoctor-module
 build:
    - "{{build0}}"
+   - !eval "'{{build_release_specific}}' if int({{site.os_release}}) < 10 else ''"
 manifest:
    - git
    - git-module
