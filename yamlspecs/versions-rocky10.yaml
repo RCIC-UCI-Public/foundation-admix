@@ -1,0 +1,4 @@
+!include versions.yaml
+!include site.yaml
+---
+swig: "4.4.1"

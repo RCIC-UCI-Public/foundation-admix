@@ -4,7 +4,7 @@ system:
    - gcc
    - gcc-c++
    - gcc-gfortran
-   - pcre-devel
+   - !eval "'pcre2-devel' if int({{site.os_release}}) >= 10 else 'pcre-devel'"
    - zlib-devel
    - ruby
    - ruby-devel
@@ -19,8 +19,7 @@ build0:
    - pigz-module
    - scons
    - scons-module
-   - swig
-   - swig-module
+   - !eval "'swig swig-module' if int({{site.os_release}}) < 10 else ''"
    - git-lfs
    - git-lfs-module
    - foundation-module
@@ -29,3 +28,4 @@ manifest:
    - "{{build}}"
 sets:
    - "2024"
+   - !eval "'rocky10' if int({{site.os_release}}) >= 10 else ''"
