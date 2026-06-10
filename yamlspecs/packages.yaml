@@ -1,16 +1,15 @@
 ---
-site: !include site.yaml
 system:
    - gcc
    - gcc-c++
    - gcc-gfortran
-   - !eval "'pcre2-devel' if int({{site.os_release}}) >= 10 else 'pcre-devel'"
+   - !OScmp ">=,10,pcre2-devel,pcre-devel"
    - zlib-devel
    - ruby
    - ruby-devel
    - rubygems
    - openssl-devel
-   - !ifneq "{{site.os_release}},7,libssh-devel,libssh2-devel"
+   - libssh-devel
    - libcurl-devel
    - gettext
 bootstrap:

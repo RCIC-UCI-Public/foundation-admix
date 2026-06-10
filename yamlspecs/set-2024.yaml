@@ -8,10 +8,11 @@ bootstrap:
    - asciidoctor-module
 build:
    - "{{build0}}"
-   - !eval "'{{build_release_specific}}' if int({{site.os_release}}) < 10 else ''"
+   - !OScmp "<,10,{{build_release_specific}},"
 manifest:
    - git
    - git-module
    - "{{build}}"
 
 # asciidoctor is only needed for building man pages of git-lfs
+# it is not installed on the cluster

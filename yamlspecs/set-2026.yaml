@@ -3,6 +3,6 @@
 versions: versions-2026.yaml
 bootstrap:
 build:
-   - !eval "'{{build_release_specific}}' if int({{site.os_release}}) >= 10 else ''"
+   - !OScmp ">=,10,{{build_release_specific}},"
 manifest:
    - "{{build}}"
